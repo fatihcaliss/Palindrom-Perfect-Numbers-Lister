@@ -4,27 +4,21 @@ let palinBtn = document.getElementById('palinBtn');
 let perfectBtn = document.getElementById('perfectBtn');
 
 palinBtn.addEventListener('click', () =>{
-    if(low.value >= high.value){
+    if(Number(low.value) >= Number(high.value)){
         alert("High number should be bigger than low number.")
     }
     else{    
-        for (let i = low.value; i <= high.value; i++){
+        for (let i = Number(low.value); i <= Number(high.value); i++){
         if(palindrom(i)){
             document.querySelector('.palindromeList').innerHTML += i + `<br>`
-        }
-    }
-    if(low.value >= high.value){
-        alert("High number should be bigger than low number.")
-    }}
-
-})
+        }}}})
 
 perfectBtn.addEventListener('click', () =>{
-    if(low.value >= high.value){
+    if(Number(low.value) >= Number(high.value)){
         alert("High number should be bigger than low number.")
     }
     else {    
-        for (let i = low.value; i <= high.value; i++){
+        for (let i = Number(low.value); i <= Number(high.value); i++){
         if(perfectNumber(i)){
             document.querySelector('.perfectNumberList').innerHTML += i + `<br>`
         }
